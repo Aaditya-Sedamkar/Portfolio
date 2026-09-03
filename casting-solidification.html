@@ -3,66 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AL6061-T6 Sand Casting Solidification — Aaditya's notebook</title>
+<title>AL6061-T6 Sand Casting Solidification — Aaditya Sedamkar</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="page site-header__row">
-    <a href="index.html" class="wordmark">Aaditya's notebook</a>
-    <nav class="site-nav">
-      <a href="index.html">Projects</a>
-      <a href="about.html">About</a>
-      <a href="about.html#contact">Say hi</a>
-    </nav>
+<nav class="site-nav">
+  <div class="wrap site-nav__row">
+    <a href="index.html#top" class="site-nav__mark">AADITYA SEDAMKAR</a>
+    <div class="site-nav__links">
+      <a href="index.html#work">Projects</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#capabilities">Capabilities</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
   </div>
-  <div class="torn"></div>
-</header>
+</nav>
 
 <main>
-  <section class="page entry-header">
-    <span class="entry-tag">ANSYS Fluent, casting</span>
+  <header class="wrap detail-hero">
+    <p class="detail-hero__cat">Simulation — ANSYS Fluent</p>
     <h1>AL6061-T6 Sand Casting Solidification</h1>
-  </section>
+    <p class="detail-hero__lede">A thermal simulation of the solidification front as AL6061-T6 cools in a sand mould, run in ANSYS Fluent for the Design Thinking Lab.</p>
+  </header>
 
-  <section class="page">
-    <div class="figure-row">
-      <div class="polaroid polaroid--lg" style="--tilt: 3deg;">
-        <div class="polaroid__tape"></div>
-        <div class="polaroid__frame">
-          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="placeholder for solidification front progression">
-            <rect width="200" height="200" fill="#E2D9C1"/>
-            <path d="M25 170 Q60 40 100 110 T175 50" fill="none" stroke="#8B8069" stroke-width="1.5" stroke-dasharray="3 4"/>
-            <text x="100" y="120" text-anchor="middle" font-family="Kalam, cursive" font-size="13" fill="#5C5140">solidification</text>
-            <text x="100" y="138" text-anchor="middle" font-family="Kalam, cursive" font-size="13" fill="#5C5140">front</text>
-          </svg>
-        </div>
-        <div class="polaroid__caption">the mesh</div>
+  <div class="wrap">
+    <div class="detail-facts">
+      <div class="detail-facts__cell">
+        <b>Tool</b>ANSYS Fluent
+      </div>
+      <div class="detail-facts__cell">
+        <b>Material</b>AL6061-T6
+      </div>
+      <div class="detail-facts__cell">
+        <b>Process</b>Sand casting
+      </div>
+      <div class="detail-facts__cell">
+        <b>Focus</b>Solidification front
       </div>
     </div>
 
-    <div class="entry-body">
-      <p>Most casting defects — porosity, shrinkage, hot spots — trace back to how the solidification front moves through the mould as the metal cools. It's a lot cheaper to simulate that moment than to figure out afterward why a real casting came out wrong.</p>
+    <div class="detail-thumb">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M25 75 C35 45 45 30 50 22 C55 30 65 45 75 75 Z" fill="none" stroke="#2454B0" stroke-width="2"/><line x1="25" y1="75" x2="75" y2="75" stroke="#2454B0" stroke-width="2"/><line x1="34" y1="58" x2="66" y2="58" stroke="#2454B0" stroke-width="1.5" stroke-dasharray="2 3"/>
+    </svg>
+  </div>
 
-      <h2>Running the simulation</h2>
-      <p>I modelled and meshed the casting geometry and sand mould for a transient thermal simulation in ANSYS Fluent, tracking the solidification front as AL6061-T6 cools inside it.</p>
+    <div class="detail-body">
+      <h2>Method</h2>
+      <p>The casting geometry and sand mould were modelled and meshed for a transient thermal simulation in ANSYS Fluent, tracking how the solidification front advances through the AL6061-T6 casting as it cools.</p>
 
-      <div class="margin-note">Watched that front crawl across the mesh for longer than I'd like to admit. Worth the stare — most of what goes wrong in a casting happens right there.</div>
+      <h2>Why solidification matters</h2>
+      <p>Most casting defects — porosity, shrinkage, hot spots — trace back to how the solidification front moves through the mould. Simulating that front before a real pour is cheaper than diagnosing a defective casting after one.</p>
 
-      <h2>Writing it up</h2>
-      <p>The findings were compiled into a formal synopsis, formatted to RVCE's Design Thinking Lab template — the kind of document meant to hold up next to the simulation itself, not just summarise it.</p>
+      <div class="result-box">Findings were compiled into a synopsis document, formatted to RVCE's Design Thinking Lab report template.</div>
     </div>
-  </section>
+  </div>
 
-  <nav class="entry-nav page">
-    <a href="ezprint-kiosk.html">back: EZPrint kiosk</a>
-    <a href="hvac-sustainability.html">next: HVAC sustainability case study</a>
+  <nav class="detail-nav wrap">
+    <a href="ezprint-kiosk.html">← EZPrint Kiosk</a>
+    <a href="hvac-sustainability.html">Next: HVAC Sustainability Case Study →</a>
   </nav>
 </main>
 
 <footer class="site-footer">
-  <div class="page">Aaditya P Sedamkar, mechanical engineering at RVCE Bengaluru</div>
+  <div class="wrap" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:8px;">
+    <span>© 2026 Aaditya P Sedamkar</span>
+    <span>RV College of Engineering, Bengaluru</span>
+  </div>
 </footer>
 
 </body>

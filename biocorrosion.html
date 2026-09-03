@@ -3,66 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Biocorrosion of Titanium Alloys — Aaditya's notebook</title>
+<title>Biocorrosion of Titanium Alloys — Aaditya Sedamkar</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="page site-header__row">
-    <a href="index.html" class="wordmark">Aaditya's notebook</a>
-    <nav class="site-nav">
-      <a href="index.html">Projects</a>
-      <a href="about.html">About</a>
-      <a href="about.html#contact">Say hi</a>
-    </nav>
+<nav class="site-nav">
+  <div class="wrap site-nav__row">
+    <a href="index.html#top" class="site-nav__mark">AADITYA SEDAMKAR</a>
+    <div class="site-nav__links">
+      <a href="index.html#work">Projects</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#capabilities">Capabilities</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
   </div>
-  <div class="torn"></div>
-</header>
+</nav>
 
 <main>
-  <section class="page entry-header">
-    <span class="entry-tag">electrochemistry, COMSOL</span>
+  <header class="wrap detail-hero">
+    <p class="detail-hero__cat">Simulation — COMSOL Multiphysics</p>
     <h1>Biocorrosion of Titanium Alloys</h1>
-  </section>
+    <p class="detail-hero__lede">A comparative biocorrosion simulation of three titanium alloys, built to weigh their suitability for long-term implant service — where corrosion resistance matters as much as mechanical strength.</p>
+  </header>
 
-  <section class="page">
-    <div class="figure-row">
-      <div class="polaroid polaroid--lg" style="--tilt: -2deg;">
-        <div class="polaroid__tape"></div>
-        <div class="polaroid__frame">
-          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="placeholder for electrochemical model geometry">
-            <rect width="200" height="200" fill="#E2D9C1"/>
-            <path d="M25 170 Q60 40 100 110 T175 50" fill="none" stroke="#8B8069" stroke-width="1.5" stroke-dasharray="3 4"/>
-            <text x="100" y="120" text-anchor="middle" font-family="Kalam, cursive" font-size="13" fill="#5C5140">model geometry</text>
-            
-          </svg>
-        </div>
-        <div class="polaroid__caption">the setup</div>
+  <div class="wrap">
+    <div class="detail-facts">
+      <div class="detail-facts__cell">
+        <b>Alloys compared</b>Ti-6Al-4V, Ti-6Zr, Ti-8V
+      </div>
+      <div class="detail-facts__cell">
+        <b>Core physics</b>Tertiary Current Distribution
+      </div>
+      <div class="detail-facts__cell">
+        <b>Kinetics</b>Butler–Volmer electrode model
+      </div>
+      <div class="detail-facts__cell">
+        <b>Deliverable</b>Cited academic report
       </div>
     </div>
 
-    <div class="entry-body">
-      <p>An implant that corrodes doesn't just weaken — it leaches metal ions into the tissue around it. Titanium alloys are the default choice because of the thin oxide layer that forms on their surface, but that layer behaves differently depending on what's alloyed with the titanium. I wanted to actually compare three candidates instead of assuming one was fine.</p>
+    <div class="detail-thumb">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="50" cy="28" r="8" fill="none" stroke="#2454B0" stroke-width="2"/><circle cx="26" cy="64" r="8" fill="none" stroke="#2454B0" stroke-width="2"/><circle cx="74" cy="64" r="8" fill="none" stroke="#2454B0" stroke-width="2"/><line x1="50" y1="36" x2="29" y2="58" stroke="#2454B0" stroke-width="2"/><line x1="50" y1="36" x2="71" y2="58" stroke="#2454B0" stroke-width="2"/><line x1="34" y1="64" x2="66" y2="64" stroke="#2454B0" stroke-width="2"/>
+    </svg>
+  </div>
 
-      <h2>Setting it up</h2>
-      <p>Three alloys went into the comparison — Ti-6Al-4V, Ti-6Zr and Ti-8V — each modelled in COMSOL Multiphysics using a Tertiary Current Distribution interface (Nernst–Planck transport), coupled with Butler–Volmer kinetics at the electrode and a boundary ODE submodel for repassivation.</p>
+    <div class="detail-body">
+      <h2>Method</h2>
+      <p>Each alloy was modelled using a Tertiary Current Distribution interface (Nernst–Planck transport), coupled with Butler–Volmer kinetics at the electrode surface and a boundary ODE submodel governing repassivation. The differentiating parameters for each alloy — bare exchange current density (i₀,bare), bare equilibrium potential (E_eq,bare), and repassivation rate constant (k_repass) — were extracted directly from each alloy's own .mph archive, keeping the comparison grounded in alloy-specific data rather than generic literature values.</p>
 
-      <div class="margin-note">I pulled the differentiating parameters — i₀,bare, E_eq,bare, k_repass — straight out of each alloy's own .mph file rather than reusing textbook constants. Felt like the only honest way to compare them.</div>
+      <h2>Why it matters</h2>
+      <p>An implant that corrodes releases metal ions into surrounding tissue and loses mechanical integrity over years of service. Titanium alloys are the default choice for their passive oxide layer, but that layer behaves differently depending on the alloying elements — which is what this study set out to quantify.</p>
 
-      <h2>What came out of it</h2>
-      <p>Ti-6Zr held up best of the three, on its comparative corrosion and repassivation behaviour — not the alloy I'd have bet on going in. The full comparison, with the governing equations and the alloy-by-alloy results, is written up as a proper academic report with sources cited.</p>
+      <div class="result-box">Ti-6Zr was identified as the superior alloy of the three candidates, on the basis of its comparative corrosion and repassivation behaviour. The full comparison was compiled into a detailed academic report with inline citation of supporting literature.</div>
     </div>
-  </section>
+  </div>
 
-  <nav class="entry-nav page">
-    <a href="index.html">back to the notebook</a>
-    <a href="fluid-mechanics-lab.html">next: virtual fluid mechanics lab</a>
+  <nav class="detail-nav wrap">
+    <a href="index.html#work">← Back to projects</a>
+    <a href="fluid-mechanics-lab.html">Next: Virtual Fluid Mechanics Lab →</a>
   </nav>
 </main>
 
 <footer class="site-footer">
-  <div class="page">Aaditya P Sedamkar, mechanical engineering at RVCE Bengaluru</div>
+  <div class="wrap" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:8px;">
+    <span>© 2026 Aaditya P Sedamkar</span>
+    <span>RV College of Engineering, Bengaluru</span>
+  </div>
 </footer>
 
 </body>
