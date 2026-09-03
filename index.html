@@ -3,126 +3,145 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aaditya Sedamkar — Mechanical Engineering Portfolio</title>
-<meta name="description" content="Mechanical engineering project portfolio of Aaditya P Sedamkar — simulation, design and applied fluid mechanics work.">
+<title>Aaditya Sedamkar — project notebook</title>
+<meta name="description" content="A running notebook of mechanical engineering projects by Aaditya P Sedamkar.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="site-header">
-  <div class="sheet site-header__row">
-    <a href="index.html" class="site-header__mark">AADITYA <span>SEDAMKAR</span></a>
+  <div class="page site-header__row">
+    <a href="index.html" class="wordmark">Aaditya's notebook</a>
     <nav class="site-nav">
-      <a href="index.html" aria-current="page">Work</a>
+      <a href="index.html" aria-current="page">Projects</a>
       <a href="about.html">About</a>
-      <a href="about.html#contact">Contact</a>
+      <a href="about.html#contact">Say hi</a>
     </nav>
   </div>
-  <div class="sheet">
-    <div class="title-block">
-      <div class="title-block__cell">Sheet<strong>Index</strong></div>
-      <div class="title-block__cell">Drawn by<strong>A. Sedamkar</strong></div>
-      <div class="title-block__cell">Department<strong>Mechanical Engg — RVCE</strong></div>
-      <div class="title-block__cell">Status<strong>Current — 2026</strong></div>
-    </div>
-  </div>
+  <div class="torn"></div>
 </header>
 
 <main>
-  <section class="hero">
-    <div class="sheet">
-      <p class="hero__eyebrow">Mechanical engineering student, RVCE Bengaluru</p>
-      <h1>Simulation, design and applied mechanics, worked through end to end.</h1>
-      <p>I build and document mechanical projects — from electrochemical simulation of implant alloys to full-stack engineering lab tools. This is a running index of that work, in progress and complete.</p>
-      <div class="hero__actions">
-        <a href="#work" class="btn btn--primary">View the index</a>
-        <a href="about.html" class="btn">About me</a>
-      </div>
+  <section class="page intro">
+    <h1>Hi — I'm Aaditya. I study mechanical engineering at RVCE, and this is where I keep the projects that didn't stop at the syllabus.</h1>
+    <p>Some of it's coursework I pushed further than it strictly needed to go. Some of it's things I started on my own. Photos are still catching up to the write-ups — the frames below are stand-ins until I get around to it.</p>
+
+    <div class="sticky">
+      <strong>on my desk lately</strong>
+      Rotating between simulation work and actually finishing the reports for it. The reports always take longer than the simulation did.
     </div>
   </section>
 
-  <section class="bom" id="work">
-    <div class="sheet">
-      <div class="bom__head">
-        <h2>Project index</h2>
-        <span class="bom__count">05 items</span>
+  <section class="page entries">
+    <h2>What's in here</h2>
+
+    <article class="entry">
+      <a href="biocorrosion.html" class="polaroid" style="--tilt: -3deg;">
+        <div class="polaroid__tape"></div>
+        <div class="polaroid__frame">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="placeholder">
+            <rect width="200" height="200" fill="#E2D9C1"/>
+            <path d="M20 150 Q60 40 100 120 T180 60" fill="none" stroke="#8B8069" stroke-width="1.5" stroke-dasharray="3 4"/>
+            <text x="100" y="102" text-anchor="middle" font-family="Kalam, cursive" font-size="13" fill="#5C5140">photo</text>
+            <text x="100" y="120" text-anchor="middle" font-family="Kalam, cursive" font-size="13" fill="#5C5140">goes here</text>
+          </svg>
+        </div>
+        <div class="polaroid__caption">alloy model, WIP</div>
+      </a>
+      <div>
+        <span class="entry-tag">electrochemistry, COMSOL</span>
+        <h3><a href="biocorrosion.html">Biocorrosion of Titanium Alloys</a></h3>
+        <p>Three titanium alloys, one COMSOL model, and a question implant designers actually care about: which one holds up longest inside the body. Ti-6Zr came out on top — not the one I expected going in.</p>
+        <a href="biocorrosion.html" class="pen-link">read the entry</a>
       </div>
-      <table class="bom-table">
-        <thead>
-          <tr>
-            <th>No.</th>
-            <th>Project</th>
-            <th>Discipline</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="bom__no">01</td>
-            <td>
-              <a class="row-link" href="biocorrosion.html">
-                <div class="bom__name">Biocorrosion of Titanium Alloys</div>
-                <div class="bom__desc">COMSOL simulation comparing Ti-6Al-4V, Ti-6Zr and Ti-8V for biomedical implant service life.</div>
-              </a>
-            </td>
-            <td class="bom__tags">COMSOL / Electrochemistry</td>
-            <td class="bom__status bom__status--done">Complete</td>
-          </tr>
-          <tr>
-            <td class="bom__no">02</td>
-            <td>
-              <a class="row-link" href="fluid-mechanics-lab.html">
-                <div class="bom__name">Virtual Fluid Mechanics Lab</div>
-                <div class="bom__desc">Full-stack simulation of major losses in pipe flow, with a live apparatus, validation engine and generated reports.</div>
-              </a>
-            </td>
-            <td class="bom__tags">React / Fluid Mechanics</td>
-            <td class="bom__status bom__status--done">Complete</td>
-          </tr>
-          <tr>
-            <td class="bom__no">03</td>
-            <td>
-              <a class="row-link" href="ezprint-kiosk.html">
-                <div class="bom__name">EZPrint — Smart Printing Kiosk</div>
-                <div class="bom__desc">Raspberry Pi Zero W kiosk for on-demand document printing, built for the Experiential Learning lab.</div>
-              </a>
-            </td>
-            <td class="bom__tags">Embedded / Raspberry Pi</td>
-            <td class="bom__status bom__status--done">Complete</td>
-          </tr>
-          <tr>
-            <td class="bom__no">04</td>
-            <td>
-              <a class="row-link" href="casting-solidification.html">
-                <div class="bom__name">AL6061-T6 Sand Casting Solidification</div>
-                <div class="bom__desc">ANSYS Fluent thermal analysis of the solidification front during sand casting of an aluminium alloy.</div>
-              </a>
-            </td>
-            <td class="bom__tags">ANSYS Fluent / Casting</td>
-            <td class="bom__status bom__status--done">Complete</td>
-          </tr>
-          <tr>
-            <td class="bom__no">05</td>
-            <td>
-              <a class="row-link" href="hvac-sustainability.html">
-                <div class="bom__name">HVAC Sustainability Case Study</div>
-                <div class="bom__desc">Design Thinking Lab case study evaluating sustainability trade-offs in HVAC system design.</div>
-              </a>
-            </td>
-            <td class="bom__tags">HVAC / Case Study</td>
-            <td class="bom__status bom__status--done">Complete</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    </article>
+
+    <article class="entry">
+      <a href="fluid-mechanics-lab.html" class="polaroid" style="--tilt: 2deg;">
+        <div class="polaroid__tape"></div>
+        <div class="polaroid__frame">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="placeholder">
+            <rect width="200" height="200" fill="#E2D9C1"/>
+            <path d="M30 60 L170 60 M30 60 Q30 140 100 140 Q170 140 170 60" fill="none" stroke="#8B8069" stroke-width="1.5"/>
+            <text x="100" y="170" text-anchor="middle" font-family="Kalam, cursive" font-size="13" fill="#5C5140">screenshot here</text>
+          </svg>
+        </div>
+        <div class="polaroid__caption">apparatus, live</div>
+      </a>
+      <div>
+        <span class="entry-tag">React, fluid mechanics</span>
+        <h3><a href="fluid-mechanics-lab.html">Virtual Fluid Mechanics Lab</a></h3>
+        <p>Rebuilt the pipe-flow apparatus from our fluids lab as an actual webapp — the kind you can mess with instead of just reading about. It checks your working, quizzes you, and hands you a report at the end.</p>
+        <a href="fluid-mechanics-lab.html" class="pen-link">read the entry</a>
+      </div>
+    </article>
+
+    <article class="entry">
+      <a href="ezprint-kiosk.html" class="polaroid" style="--tilt: -2deg;">
+        <div class="polaroid__tape"></div>
+        <div class="polaroid__frame">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="placeholder">
+            <rect width="200" height="200" fill="#E2D9C1"/>
+            <rect x="70" y="40" width="60" height="110" rx="4" fill="none" stroke="#8B8069" stroke-width="1.5"/>
+            <circle cx="100" cy="130" r="5" fill="none" stroke="#8B8069" stroke-width="1.5"/>
+            <text x="100" y="175" text-anchor="middle" font-family="Kalam, cursive" font-size="13" fill="#5C5140">kiosk photo</text>
+          </svg>
+        </div>
+        <div class="polaroid__caption">EZPrint unit</div>
+      </a>
+      <div>
+        <span class="entry-tag">Raspberry Pi, product</span>
+        <h3><a href="ezprint-kiosk.html">EZPrint — Smart Printing Kiosk</a></h3>
+        <p>A Pi Zero W tucked into a kiosk, so nobody on campus has to track someone down just to print something. My Experiential Learning project, and the one that felt most like actual product design.</p>
+        <a href="ezprint-kiosk.html" class="pen-link">read the entry</a>
+      </div>
+    </article>
+
+    <article class="entry">
+      <a href="casting-solidification.html" class="polaroid" style="--tilt: 3deg;">
+        <div class="polaroid__tape"></div>
+        <div class="polaroid__frame">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="placeholder">
+            <rect width="200" height="200" fill="#E2D9C1"/>
+            <path d="M40 150 C60 100 90 60 100 40 C110 60 140 100 160 150 Z" fill="none" stroke="#8B8069" stroke-width="1.5"/>
+            <text x="100" y="175" text-anchor="middle" font-family="Kalam, cursive" font-size="13" fill="#5C5140">mesh render</text>
+          </svg>
+        </div>
+        <div class="polaroid__caption">solidification front</div>
+      </a>
+      <div>
+        <span class="entry-tag">ANSYS Fluent, casting</span>
+        <h3><a href="casting-solidification.html">AL6061-T6 Sand Casting Solidification</a></h3>
+        <p>Watched a solidification front crawl across a mesh in ANSYS Fluent for longer than I'd like to admit. Most casting defects trace back to exactly this moment, so it felt worth the stare.</p>
+        <a href="casting-solidification.html" class="pen-link">read the entry</a>
+      </div>
+    </article>
+
+    <article class="entry">
+      <a href="hvac-sustainability.html" class="polaroid" style="--tilt: -3deg;">
+        <div class="polaroid__tape"></div>
+        <div class="polaroid__frame">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="placeholder">
+            <rect width="200" height="200" fill="#E2D9C1"/>
+            <rect x="50" y="70" width="100" height="60" fill="none" stroke="#8B8069" stroke-width="1.5"/>
+            <path d="M60 70 V50 M140 70 V50" stroke="#8B8069" stroke-width="1.5"/>
+            <text x="100" y="160" text-anchor="middle" font-family="Kalam, cursive" font-size="13" fill="#5C5140">system diagram</text>
+          </svg>
+        </div>
+        <div class="polaroid__caption">HVAC schematic</div>
+      </a>
+      <div>
+        <span class="entry-tag">HVAC, case study</span>
+        <h3><a href="hvac-sustainability.html">HVAC Sustainability Case Study</a></h3>
+        <p>A Design Thinking Lab case study on the trade-offs nobody puts on the brochure — comfort, energy use, and equipment life all pulling in different directions at once.</p>
+        <a href="hvac-sustainability.html" class="pen-link">read the entry</a>
+      </div>
+    </article>
   </section>
 </main>
 
 <footer class="site-footer">
-  <div class="sheet" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:8px;">
-    <span>© 2026 Aaditya P Sedamkar</span>
-    <span>RV College of Engineering, Bengaluru</span>
-  </div>
+  <div class="page">Aaditya P Sedamkar, mechanical engineering at RVCE Bengaluru</div>
 </footer>
 
 </body>

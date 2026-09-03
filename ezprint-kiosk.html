@@ -3,131 +3,66 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EZPrint — Smart Printing Kiosk — Aaditya Sedamkar</title>
+<title>EZPrint — Smart Printing Kiosk — Aaditya's notebook</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="site-header">
-  <div class="sheet site-header__row">
-    <a href="index.html" class="site-header__mark">AADITYA <span>SEDAMKAR</span></a>
+  <div class="page site-header__row">
+    <a href="index.html" class="wordmark">Aaditya's notebook</a>
     <nav class="site-nav">
-      <a href="index.html">Work</a>
+      <a href="index.html">Projects</a>
       <a href="about.html">About</a>
-      <a href="about.html#contact">Contact</a>
+      <a href="about.html#contact">Say hi</a>
     </nav>
   </div>
-  <div class="sheet">
-    <div class="title-block">
-      <div class="title-block__cell">Sheet<strong>03 / 05</strong></div>
-      <div class="title-block__cell">Hardware<strong>Raspberry Pi Zero W</strong></div>
-      <div class="title-block__cell">Course<strong>Experiential Learning</strong></div>
-      <div class="title-block__cell">Status<strong>Complete</strong></div>
-    </div>
-  </div>
+  <div class="torn"></div>
 </header>
 
 <main>
-  <section class="project-hero">
-    <div class="sheet">
-      <div class="project-hero__tags">
-        <span class="tag">Raspberry Pi</span>
-        <span class="tag">Embedded Systems</span>
-        <span class="tag">Product Design</span>
+  <section class="page entry-header">
+    <span class="entry-tag">Raspberry Pi, product</span>
+    <h1>EZPrint — Smart Printing Kiosk</h1>
+  </section>
+
+  <section class="page">
+    <div class="figure-row">
+      <div class="polaroid polaroid--lg" style="--tilt: -3deg;">
+        <div class="polaroid__tape"></div>
+        <div class="polaroid__frame">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="placeholder for kiosk hardware layout">
+            <rect width="200" height="200" fill="#E2D9C1"/>
+            <path d="M25 170 Q60 40 100 110 T175 50" fill="none" stroke="#8B8069" stroke-width="1.5" stroke-dasharray="3 4"/>
+            <text x="100" y="120" text-anchor="middle" font-family="Kalam, cursive" font-size="13" fill="#5C5140">kiosk</text>
+            <text x="100" y="138" text-anchor="middle" font-family="Kalam, cursive" font-size="13" fill="#5C5140">hardware</text>
+          </svg>
+        </div>
+        <div class="polaroid__caption">the unit</div>
       </div>
-      <h1>EZPrint — Smart Printing Kiosk</h1>
-      <p class="project-hero__summary">A smart, self-service printing kiosk built around a Raspberry Pi Zero W — developed for the Experiential Learning course to take the friction out of getting a document printed on campus.</p>
     </div>
-    <div class="sheet">
-      <div class="spec-strip">
-        <div class="spec-strip__cell">
-          <p class="spec-strip__label">Hardware</p>
-          <p class="spec-strip__value">Raspberry Pi Zero W</p>
-        </div>
-        <div class="spec-strip__cell">
-          <p class="spec-strip__label">Course</p>
-          <p class="spec-strip__value">Experiential Learning (EL)</p>
-        </div>
-        <div class="spec-strip__cell">
-          <p class="spec-strip__label">Focus</p>
-          <p class="spec-strip__value">Self-service printing</p>
-        </div>
-        <div class="spec-strip__cell">
-          <p class="spec-strip__label">Output</p>
-          <p class="spec-strip__value">Kiosk prototype + report</p>
-        </div>
-      </div>
+
+    <div class="entry-body">
+      <p>Printing on campus usually means finding whoever has access to a printer and waiting your turn. EZPrint turns that into a kiosk problem instead — a small, self-contained unit you walk up to, submit a job on, and collect a printout from.</p>
+
+      <h2>The build</h2>
+      <p>A Raspberry Pi Zero W sits at the centre of it — small footprint, low cost, enough compute for the job. I scoped and documented the whole thing as an Experiential Learning submission, following the department's reporting structure from brief to final writeup.</p>
+
+      <div class="margin-note">This was the project that felt least like a lab exercise and most like actually designing a product someone would use — thinking about the walk-up flow mattered as much as the wiring did.</div>
+
+      <h2>Where it landed</h2>
+      <p>Delivered as a working prototype concept, with the full build documented and formatted to RVCE's Experiential Learning report standard.</p>
     </div>
   </section>
 
-  <section class="sheet">
-    <div class="project-section">
-      <h2>The brief</h2>
-      <p>Printing on campus usually means finding someone with access to a printer and waiting your turn. EZPrint reframes that as a kiosk problem: a small, self-contained unit a student can walk up to, submit a job on, and collect a printout from — no intermediary required.</p>
-    </div>
-
-    <div class="figure-grid">
-      <figure class="figure">
-        <div class="figure__frame">
-          <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder for kiosk hardware layout">
-            <rect width="400" height="250" fill="#FBFAF6"/>
-            <defs><pattern id="h4" width="10" height="10" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="10" stroke="#D5D1C2" stroke-width="1"/></pattern></defs>
-            <rect width="400" height="250" fill="url(#h4)"/>
-            <g stroke="#1E2A33" stroke-width="1">
-              <line x1="12" y1="12" x2="28" y2="12"/><line x1="12" y1="12" x2="12" y2="28"/>
-              <line x1="388" y1="12" x2="372" y2="12"/><line x1="388" y1="12" x2="388" y2="28"/>
-              <line x1="12" y1="238" x2="28" y2="238"/><line x1="12" y1="238" x2="12" y2="222"/>
-              <line x1="388" y1="238" x2="372" y2="238"/><line x1="388" y1="238" x2="388" y2="222"/>
-            </g>
-            <text x="200" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#52626C">IMAGE / RESULT PLACEHOLDER</text>
-            <text x="200" y="138" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9" fill="#8A9198">Drop render, screenshot or plot here</text>
-          </svg>
-        </div>
-        <figcaption class="figure__caption"><span>FIG. 01</span><span>Kiosk hardware layout</span></figcaption>
-      </figure>
-      <figure class="figure">
-        <div class="figure__frame">
-          <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder for user flow diagram">
-            <rect width="400" height="250" fill="#FBFAF6"/>
-            <defs><pattern id="h5" width="10" height="10" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="10" stroke="#D5D1C2" stroke-width="1"/></pattern></defs>
-            <rect width="400" height="250" fill="url(#h5)"/>
-            <g stroke="#1E2A33" stroke-width="1">
-              <line x1="12" y1="12" x2="28" y2="12"/><line x1="12" y1="12" x2="12" y2="28"/>
-              <line x1="388" y1="12" x2="372" y2="12"/><line x1="388" y1="12" x2="388" y2="28"/>
-              <line x1="12" y1="238" x2="28" y2="238"/><line x1="12" y1="238" x2="12" y2="222"/>
-              <line x1="388" y1="238" x2="372" y2="238"/><line x1="388" y1="238" x2="388" y2="222"/>
-            </g>
-            <text x="200" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#52626C">IMAGE / RESULT PLACEHOLDER</text>
-            <text x="200" y="138" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9" fill="#8A9198">Drop render, screenshot or plot here</text>
-          </svg>
-        </div>
-        <figcaption class="figure__caption"><span>FIG. 02</span><span>Self-service user flow</span></figcaption>
-      </figure>
-    </div>
-
-    <div class="project-section">
-      <h2>Method</h2>
-      <p>The Raspberry Pi Zero W was chosen as the compute core for its small footprint and low cost, sitting at the centre of the kiosk's hardware layout. The project was scoped and documented as an Experiential Learning submission, following RVCE's EL reporting structure end to end.</p>
-    </div>
-
-    <div class="project-section">
-      <h2>Result</h2>
-      
-      <p>Delivered as a working prototype concept with full documentation formatted to the department's EL report standard.</p>
-    </div>
-  </section>
-
-  <nav class="project-nav sheet">
-    <a href="fluid-mechanics-lab.html">← Virtual Fluid Mechanics Lab</a>
-    <a href="casting-solidification.html">Next: Sand Casting Solidification →</a>
+  <nav class="entry-nav page">
+    <a href="fluid-mechanics-lab.html">back: virtual fluid mechanics lab</a>
+    <a href="casting-solidification.html">next: sand casting solidification</a>
   </nav>
 </main>
 
 <footer class="site-footer">
-  <div class="sheet" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:8px;">
-    <span>© 2026 Aaditya P Sedamkar</span>
-    <span>RV College of Engineering, Bengaluru</span>
-  </div>
+  <div class="page">Aaditya P Sedamkar, mechanical engineering at RVCE Bengaluru</div>
 </footer>
 
 </body>

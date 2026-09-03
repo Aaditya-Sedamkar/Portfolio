@@ -3,131 +3,66 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Biocorrosion of Titanium Alloys — Aaditya Sedamkar</title>
+<title>Biocorrosion of Titanium Alloys — Aaditya's notebook</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="site-header">
-  <div class="sheet site-header__row">
-    <a href="index.html" class="site-header__mark">AADITYA <span>SEDAMKAR</span></a>
+  <div class="page site-header__row">
+    <a href="index.html" class="wordmark">Aaditya's notebook</a>
     <nav class="site-nav">
-      <a href="index.html">Work</a>
+      <a href="index.html">Projects</a>
       <a href="about.html">About</a>
-      <a href="about.html#contact">Contact</a>
+      <a href="about.html#contact">Say hi</a>
     </nav>
   </div>
-  <div class="sheet">
-    <div class="title-block">
-      <div class="title-block__cell">Sheet<strong>01 / 05</strong></div>
-      <div class="title-block__cell">Tool<strong>COMSOL Multiphysics</strong></div>
-      <div class="title-block__cell">Domain<strong>Biomedical implants</strong></div>
-      <div class="title-block__cell">Status<strong>Complete</strong></div>
-    </div>
-  </div>
+  <div class="torn"></div>
 </header>
 
 <main>
-  <section class="project-hero">
-    <div class="sheet">
-      <div class="project-hero__tags">
-        <span class="tag">COMSOL Multiphysics</span>
-        <span class="tag">Electrochemistry</span>
-        <span class="tag">Biomedical</span>
+  <section class="page entry-header">
+    <span class="entry-tag">electrochemistry, COMSOL</span>
+    <h1>Biocorrosion of Titanium Alloys</h1>
+  </section>
+
+  <section class="page">
+    <div class="figure-row">
+      <div class="polaroid polaroid--lg" style="--tilt: -2deg;">
+        <div class="polaroid__tape"></div>
+        <div class="polaroid__frame">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="placeholder for electrochemical model geometry">
+            <rect width="200" height="200" fill="#E2D9C1"/>
+            <path d="M25 170 Q60 40 100 110 T175 50" fill="none" stroke="#8B8069" stroke-width="1.5" stroke-dasharray="3 4"/>
+            <text x="100" y="120" text-anchor="middle" font-family="Kalam, cursive" font-size="13" fill="#5C5140">model geometry</text>
+            
+          </svg>
+        </div>
+        <div class="polaroid__caption">the setup</div>
       </div>
-      <h1>Biocorrosion of Titanium Alloys for Biomedical Implants</h1>
-      <p class="project-hero__summary">A comparative biocorrosion simulation of three titanium alloys — Ti-6Al-4V, Ti-6Zr and Ti-8V — built to weigh their suitability for long-term implant service, where corrosion resistance is as important as mechanical strength.</p>
     </div>
-    <div class="sheet">
-      <div class="spec-strip">
-        <div class="spec-strip__cell">
-          <p class="spec-strip__label">Alloys compared</p>
-          <p class="spec-strip__value">Ti-6Al-4V, Ti-6Zr, Ti-8V</p>
-        </div>
-        <div class="spec-strip__cell">
-          <p class="spec-strip__label">Core physics</p>
-          <p class="spec-strip__value">Tertiary Current Distribution (Nernst–Planck)</p>
-        </div>
-        <div class="spec-strip__cell">
-          <p class="spec-strip__label">Kinetics model</p>
-          <p class="spec-strip__value">Butler–Volmer electrode kinetics</p>
-        </div>
-        <div class="spec-strip__cell">
-          <p class="spec-strip__label">Deliverable</p>
-          <p class="spec-strip__value">Academic report, cited</p>
-        </div>
-      </div>
+
+    <div class="entry-body">
+      <p>An implant that corrodes doesn't just weaken — it leaches metal ions into the tissue around it. Titanium alloys are the default choice because of the thin oxide layer that forms on their surface, but that layer behaves differently depending on what's alloyed with the titanium. I wanted to actually compare three candidates instead of assuming one was fine.</p>
+
+      <h2>Setting it up</h2>
+      <p>Three alloys went into the comparison — Ti-6Al-4V, Ti-6Zr and Ti-8V — each modelled in COMSOL Multiphysics using a Tertiary Current Distribution interface (Nernst–Planck transport), coupled with Butler–Volmer kinetics at the electrode and a boundary ODE submodel for repassivation.</p>
+
+      <div class="margin-note">I pulled the differentiating parameters — i₀,bare, E_eq,bare, k_repass — straight out of each alloy's own .mph file rather than reusing textbook constants. Felt like the only honest way to compare them.</div>
+
+      <h2>What came out of it</h2>
+      <p>Ti-6Zr held up best of the three, on its comparative corrosion and repassivation behaviour — not the alloy I'd have bet on going in. The full comparison, with the governing equations and the alloy-by-alloy results, is written up as a proper academic report with sources cited.</p>
     </div>
   </section>
 
-  <section class="sheet">
-    <div class="project-section">
-      <h2>Why alloy choice matters here</h2>
-      <p>An implant that corrodes releases metal ions into surrounding tissue and loses mechanical integrity over years of service. Titanium alloys are the default choice for their passive oxide layer, but that layer behaves differently depending on the alloying elements — which is what this study set out to quantify rather than assume.</p>
-    </div>
-
-    <div class="figure-grid">
-      <figure class="figure">
-        <div class="figure__frame">
-          <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder for electrochemical model geometry">
-            <rect width="400" height="250" fill="#FBFAF6"/>
-            <defs><pattern id="h1" width="10" height="10" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="10" stroke="#D5D1C2" stroke-width="1"/></pattern></defs>
-            <rect width="400" height="250" fill="url(#h1)"/>
-            <g stroke="#1E2A33" stroke-width="1">
-              <line x1="12" y1="12" x2="28" y2="12"/><line x1="12" y1="12" x2="12" y2="28"/>
-              <line x1="388" y1="12" x2="372" y2="12"/><line x1="388" y1="12" x2="388" y2="28"/>
-              <line x1="12" y1="238" x2="28" y2="238"/><line x1="12" y1="238" x2="12" y2="222"/>
-              <line x1="388" y1="238" x2="372" y2="238"/><line x1="388" y1="238" x2="388" y2="222"/>
-            </g>
-            <text x="200" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#52626C">IMAGE / RESULT PLACEHOLDER</text>
-            <text x="200" y="138" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9" fill="#8A9198">Drop render, screenshot or plot here</text>
-          </svg>
-        </div>
-        <figcaption class="figure__caption"><span>FIG. 01</span><span>Model geometry &amp; boundary conditions</span></figcaption>
-      </figure>
-
-      <figure class="figure">
-        <div class="figure__frame">
-          <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder for comparative results">
-            <rect width="400" height="250" fill="#FBFAF6"/>
-            <rect width="400" height="250" fill="url(#h1)"/>
-            <g stroke="#1E2A33" stroke-width="1">
-              <line x1="12" y1="12" x2="28" y2="12"/><line x1="12" y1="12" x2="12" y2="28"/>
-              <line x1="388" y1="12" x2="372" y2="12"/><line x1="388" y1="12" x2="388" y2="28"/>
-              <line x1="12" y1="238" x2="28" y2="238"/><line x1="12" y1="238" x2="12" y2="222"/>
-              <line x1="388" y1="238" x2="372" y2="238"/><line x1="388" y1="238" x2="388" y2="222"/>
-            </g>
-            <text x="200" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#52626C">IMAGE / RESULT PLACEHOLDER</text>
-            <text x="200" y="138" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9" fill="#8A9198">Drop render, screenshot or plot here</text>
-          </svg>
-        </div>
-        <figcaption class="figure__caption"><span>FIG. 02</span><span>Comparative repassivation behaviour</span></figcaption>
-      </figure>
-    </div>
-
-    <div class="project-section">
-      <h2>Method</h2>
-      <p>Each alloy was modelled using a Tertiary Current Distribution physics interface (Nernst–Planck transport), coupled with Butler–Volmer kinetics at the electrode surface and a boundary ODE submodel governing repassivation. Rather than relying on generic literature constants, the differentiating parameters for each alloy — the bare exchange current density (i₀,bare), the bare equilibrium potential (E_eq,bare), and the repassivation rate constant (k_repass) — were extracted directly from each alloy's own .mph archive, keeping the comparison grounded in alloy-specific electrochemical data.</p>
-    </div>
-
-    <div class="project-section">
-      <h2>Result</h2>
-      <div class="result-callout">Ti-6Zr was identified as the superior alloy of the three candidates evaluated, on the basis of its comparative corrosion and repassivation behaviour.</div>
-      <p>The full comparison — model setup, governing equations, and alloy-by-alloy results — was compiled into a detailed academic report with inline citation of supporting literature.</p>
-    </div>
-  </section>
-
-  <nav class="project-nav sheet">
-    <a href="index.html">← Back to index</a>
-    <a href="fluid-mechanics-lab.html">Next: Virtual Fluid Mechanics Lab →</a>
+  <nav class="entry-nav page">
+    <a href="index.html">back to the notebook</a>
+    <a href="fluid-mechanics-lab.html">next: virtual fluid mechanics lab</a>
   </nav>
 </main>
 
 <footer class="site-footer">
-  <div class="sheet" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:8px;">
-    <span>© 2026 Aaditya P Sedamkar</span>
-    <span>RV College of Engineering, Bengaluru</span>
-  </div>
+  <div class="page">Aaditya P Sedamkar, mechanical engineering at RVCE Bengaluru</div>
 </footer>
 
 </body>
