@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Virtual Fluid Mechanics Lab — Major Losses in Pipe Flow — Aaditya Sedamkar</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="sheet site-header__row">
+    <a href="../index.html" class="site-header__mark">AADITYA <span>SEDAMKAR</span></a>
+    <nav class="site-nav">
+      <a href="../index.html">Work</a>
+      <a href="../about.html">About</a>
+      <a href="../about.html#contact">Contact</a>
+    </nav>
+  </div>
+  <div class="sheet">
+    <div class="title-block">
+      <div class="title-block__cell">Sheet<strong>02 / 05</strong></div>
+      <div class="title-block__cell">Stack<strong>React / Vite / Express</strong></div>
+      <div class="title-block__cell">Experiment<strong>Major Losses in Pipe Flow</strong></div>
+      <div class="title-block__cell">Status<strong>Complete</strong></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="project-hero">
+    <div class="sheet">
+      <div class="project-hero__tags">
+        <span class="tag">React</span>
+        <span class="tag">Vite</span>
+        <span class="tag">Fluid Mechanics</span>
+      </div>
+      <h1>Virtual Fluid Mechanics Lab — Major Losses in Pipe Flow</h1>
+      <p class="project-hero__summary">A full-stack virtual replica of the Major Losses in Pipe Flow experiment — students run the apparatus, get their calculations checked, test their understanding, and walk away with a generated report.</p>
+    </div>
+    <div class="sheet">
+      <div class="spec-strip">
+        <div class="spec-strip__cell">
+          <p class="spec-strip__label">Stack</p>
+          <p class="spec-strip__value">React + Vite + Tailwind + Express</p>
+        </div>
+        <div class="spec-strip__cell">
+          <p class="spec-strip__label">Experiment</p>
+          <p class="spec-strip__value">Major Losses in Pipe Flow</p>
+        </div>
+        <div class="spec-strip__cell">
+          <p class="spec-strip__label">Modules</p>
+          <p class="spec-strip__value">Apparatus, validation, quiz, report</p>
+        </div>
+        <div class="spec-strip__cell">
+          <p class="spec-strip__label">Output</p>
+          <p class="spec-strip__value">Auto-generated PDF report</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="project-section">
+      <h2>The problem it solves</h2>
+      <p>Access to the physical pipe-flow rig is limited to lab hours, and students who fall behind or want extra practice have no way to revisit the experiment. This lab rebuilds the apparatus and its logic in the browser so the experience — and the learning — isn't tied to a time slot.</p>
+    </div>
+
+    <div class="figure-grid">
+      <figure class="figure">
+        <div class="figure__frame">
+          <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder for animated pipe-flow apparatus">
+            <rect width="400" height="250" fill="#FBFAF6"/>
+            <defs><pattern id="h2" width="10" height="10" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="10" stroke="#D5D1C2" stroke-width="1"/></pattern></defs>
+            <rect width="400" height="250" fill="url(#h2)"/>
+            <g stroke="#1E2A33" stroke-width="1">
+              <line x1="12" y1="12" x2="28" y2="12"/><line x1="12" y1="12" x2="12" y2="28"/>
+              <line x1="388" y1="12" x2="372" y2="12"/><line x1="388" y1="12" x2="388" y2="28"/>
+              <line x1="12" y1="238" x2="28" y2="238"/><line x1="12" y1="238" x2="12" y2="222"/>
+              <line x1="388" y1="238" x2="372" y2="238"/><line x1="388" y1="238" x2="388" y2="222"/>
+            </g>
+            <text x="200" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#52626C">IMAGE / RESULT PLACEHOLDER</text>
+            <text x="200" y="138" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9" fill="#8A9198">Drop render, screenshot or plot here</text>
+          </svg>
+        </div>
+        <figcaption class="figure__caption"><span>FIG. 01</span><span>Animated SVG pipe-flow apparatus</span></figcaption>
+      </figure>
+      <figure class="figure">
+        <div class="figure__frame">
+          <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder for auto-generated report">
+            <rect width="400" height="250" fill="#FBFAF6"/>
+            <defs><pattern id="h3" width="10" height="10" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="10" stroke="#D5D1C2" stroke-width="1"/></pattern></defs>
+            <rect width="400" height="250" fill="url(#h3)"/>
+            <g stroke="#1E2A33" stroke-width="1">
+              <line x1="12" y1="12" x2="28" y2="12"/><line x1="12" y1="12" x2="12" y2="28"/>
+              <line x1="388" y1="12" x2="372" y2="12"/><line x1="388" y1="12" x2="388" y2="28"/>
+              <line x1="12" y1="238" x2="28" y2="238"/><line x1="12" y1="238" x2="12" y2="222"/>
+              <line x1="388" y1="238" x2="372" y2="238"/><line x1="388" y1="238" x2="388" y2="222"/>
+            </g>
+            <text x="200" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#52626C">IMAGE / RESULT PLACEHOLDER</text>
+            <text x="200" y="138" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9" fill="#8A9198">Drop render, screenshot or plot here</text>
+          </svg>
+        </div>
+        <figcaption class="figure__caption"><span>FIG. 02</span><span>Auto-generated PDF lab report</span></figcaption>
+      </figure>
+    </div>
+
+    <div class="project-section">
+      <h2>Method</h2>
+      <p>Built as a full-stack React + Vite + TailwindCSS application with an Express.js backend. The apparatus is rendered as an animated SVG that responds to live parameter input, a calculation-validation module checks a student's working against the underlying major-loss equations, and a quiz/viva module lets them self-test before the backend compiles a PDF report of the session.</p>
+    </div>
+
+    <div class="project-section">
+      <h2>Result</h2>
+      <div class="result-callout">A complete four-part flow: run the apparatus, check your working, test your understanding, download the report.</div>
+      <p>The result reads less like a static explainer and more like a working lab station — the kind a student could use unsupervised and still leave with a valid report.</p>
+    </div>
+  </section>
+
+  <nav class="project-nav sheet">
+    <a href="biocorrosion.html">← Biocorrosion of Titanium Alloys</a>
+    <a href="ezprint-kiosk.html">Next: EZPrint Kiosk →</a>
+  </nav>
+</main>
+
+<footer class="site-footer">
+  <div class="sheet" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:8px;">
+    <span>© 2026 Aaditya P Sedamkar</span>
+    <span>RV College of Engineering, Bengaluru</span>
+  </div>
+</footer>
+
+</body>
+</html>
