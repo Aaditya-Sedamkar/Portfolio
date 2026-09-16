@@ -6,6 +6,7 @@
 <title>Aaditya Sedamkar — Mechanical Engineering Portfolio</title>
 <meta name="description" content="Aaditya P Sedamkar: mechanical engineering student at RVCE Bengaluru. Simulation, embedded systems, and applied fluid mechanics projects.">
 <link rel="stylesheet" href="style.css">
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
 </head>
 <body>
 
@@ -25,19 +26,34 @@
 <main id="top">
 
   <header class="hero">
-    <div class="wrap">
-      <p class="hero__eyebrow">Mechanical Engineering, RV College of Engineering — Bengaluru</p>
-      <h1>Simulation, embedded systems, and applied mechanics.</h1>
-      <p class="hero__lede">I build and document mechanical engineering projects — from electrochemical implant simulations to full-stack lab tools — and take them further than the coursework asks for.</p>
-      <div class="hero__cta">
-        <a href="#work" class="btn btn--solid">View projects</a>
-        <a href="#contact" class="btn btn--outline">Get in touch</a>
+    <div class="wrap hero-split">
+      <div class="hero-split__content">
+        <p class="hero__eyebrow">Mechanical Engineering Student at R V College of Engineering, Bangalore<br>Mechanical Engineer at SCRUB Robotics, Atomic Dynamics Pvt Ltd, Bangalore</p>
+        <h1>Mechanical design, simulation, and robotics prototyping.</h1>
+        <p class="hero__lede">From detailed multiphysics models to hands-on CNC machining and field-tested marine bots, I build mechanical systems that solve real-world engineering problems.</p>
+        <div class="hero__cta">
+          <a href="#work" class="btn btn--solid">View projects</a>
+          <a href="#contact" class="btn btn--outline">Get in touch</a>
+        </div>
+      </div>
+      <div class="hero-split__graphic">
+        <div class="graphic-placeholder">
+          <model-viewer 
+            src="crane_hook.glb" 
+            alt="3D CAD model of a crane hook" 
+            auto-rotate 
+            camera-controls 
+            shadow-intensity="1" 
+            exposure="1.2"
+            style="width: 100%; height: 100%; background-color: transparent;">
+          </model-viewer>
+        </div>
       </div>
     </div>
     <div class="wrap">
       <div class="stat-bar">
         <div class="stat">
-          <div class="stat__num">5</div>
+          <div class="stat__num">8</div>
           <div class="stat__label">Projects built and documented</div>
         </div>
         <div class="stat">
@@ -51,6 +67,30 @@
       </div>
     </div>
   </header>
+
+  <section class="wrap process" id="process">
+    <div class="section-head">
+      <h2>My Process</h2>
+      <p>How I bring engineering concepts to life.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="process-step__num">01</div>
+        <h3>CAD Design</h3>
+        <p>Creating precise 3D models and assemblies using tools like SolidWorks and AutoCAD to ensure structural integrity and manufacturability.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-step__num">02</div>
+        <h3>Simulation</h3>
+        <p>Validating designs through rigorous multiphysics simulations in ANSYS and COMSOL to optimize thermal, fluid, and structural performance.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-step__num">03</div>
+        <h3>Prototyping</h3>
+        <p>Manufacturing physical test units via 3D printing, CNC machining, and assembling electronics for real-world field testing.</p>
+      </div>
+    </div>
+  </section>
 
   <section class="wrap" id="work">
     <div class="section-head">
@@ -132,20 +172,47 @@
         </div>
       </a>
 
-      <a class="card" href="hvac-sustainability.html" data-category="case-study">
-        <div class="card__thumb">
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect x="22" y="35" width="56" height="32" fill="none" stroke="#2454B0" stroke-width="2"/>
-            <line x1="34" y1="35" x2="34" y2="20" stroke="#2454B0" stroke-width="2"/>
-            <line x1="66" y1="35" x2="66" y2="20" stroke="#2454B0" stroke-width="2"/>
-            <line x1="30" y1="45" x2="70" y2="45" stroke="#2454B0" stroke-width="1.5"/>
-            <line x1="30" y1="55" x2="70" y2="55" stroke="#2454B0" stroke-width="1.5"/>
-          </svg>
+      <a class="card" href="#" data-category="hardware">
+        <div class="card__thumb" style="display: flex; align-items: center; justify-content: center; background: rgba(36, 84, 176, 0.05);">
+          <span style="color: #2454B0; font-weight: 500;">Placeholder</span>
         </div>
         <div class="card__body">
-          <div class="card__cat">Case Study</div>
-          <h3 class="card__title">HVAC Sustainability Case Study</h3>
-          <p class="card__desc">Design Thinking Lab case study weighing comfort, energy use, and equipment life in HVAC system design.</p>
+          <div class="card__cat">Category</div>
+          <h3 class="card__title">New Project 1</h3>
+          <p class="card__desc">Details and images for this project will be added soon.</p>
+        </div>
+      </a>
+
+      <a class="card" href="#" data-category="hardware">
+        <div class="card__thumb" style="display: flex; align-items: center; justify-content: center; background: rgba(36, 84, 176, 0.05);">
+          <span style="color: #2454B0; font-weight: 500;">Placeholder</span>
+        </div>
+        <div class="card__body">
+          <div class="card__cat">Category</div>
+          <h3 class="card__title">New Project 2</h3>
+          <p class="card__desc">Details and images for this project will be added soon.</p>
+        </div>
+      </a>
+
+      <a class="card" href="#" data-category="hardware">
+        <div class="card__thumb" style="display: flex; align-items: center; justify-content: center; background: rgba(36, 84, 176, 0.05);">
+          <span style="color: #2454B0; font-weight: 500;">Placeholder</span>
+        </div>
+        <div class="card__body">
+          <div class="card__cat">Category</div>
+          <h3 class="card__title">New Project 3</h3>
+          <p class="card__desc">Details and images for this project will be added soon.</p>
+        </div>
+      </a>
+
+      <a class="card" href="#" data-category="hardware">
+        <div class="card__thumb" style="display: flex; align-items: center; justify-content: center; background: rgba(36, 84, 176, 0.05);">
+          <span style="color: #2454B0; font-weight: 500;">Placeholder</span>
+        </div>
+        <div class="card__body">
+          <div class="card__cat">Category</div>
+          <h3 class="card__title">New Project 4</h3>
+          <p class="card__desc">Details and images for this project will be added soon.</p>
         </div>
       </a>
 
@@ -154,41 +221,20 @@
 
   <section class="wrap" id="skills">
     <div class="section-head">
-      <h2>Skill matrix</h2>
-      <p>Tools I've actually used across these projects, grouped by what they're for.</p>
+      <h2>Core Skills</h2>
+      <p>My toolkit for designing, simulating, and building.</p>
     </div>
-    <div class="skills-grid">
-      <div class="skill-group">
-        <h3>Simulation &amp; Analysis</h3>
-        <ul>
-          <li>COMSOL Multiphysics</li>
-          <li>ANSYS Fluent</li>
-        </ul>
-      </div>
-      <div class="skill-group">
-        <h3>Software</h3>
-        <ul>
-          <li>React &amp; Vite</li>
-          <li>TailwindCSS</li>
-          <li>Express.js</li>
-          <li>Python</li>
-        </ul>
-      </div>
-      <div class="skill-group">
-        <h3>Hardware</h3>
-        <ul>
-          <li>Raspberry Pi Zero W</li>
-          <li>Embedded prototyping</li>
-        </ul>
-      </div>
-      <div class="skill-group">
-        <h3>Documentation</h3>
-        <ul>
-          <li>LaTeX</li>
-          <li>Formal report writing</li>
-          <li>RVCE report templates</li>
-        </ul>
-      </div>
+    <div class="skills-pills">
+      <span class="skill-pill">COMSOL &amp; ANSYS</span>
+      <span class="skill-pill">MATLAB</span>
+      <span class="skill-pill">CAD Modeling</span>
+      <span class="skill-pill">3D Printing</span>
+      <span class="skill-pill">CNC Machining</span>
+      <span class="skill-pill">Arduino (UNO, MEGA)</span>
+      <span class="skill-pill">Python</span>
+      <span class="skill-pill">C &amp; Java</span>
+      <span class="skill-pill">Field Troubleshooting</span>
+      <span class="skill-pill">Root-cause Analysis</span>
     </div>
   </section>
 
@@ -228,32 +274,32 @@
   <section class="wrap" id="capabilities">
     <div class="section-head">
       <h2>Capabilities</h2>
-      <p>How I actually contribute, mapped to the project that shows it best.</p>
+      <p>How I apply my skills to real-world engineering challenges.</p>
     </div>
     <div class="cap-grid">
       <div class="cap">
         <span class="cap__code">SIM</span>
         <h3>Simulation &amp; analysis</h3>
-        <p>Electrochemical, thermal and fluid modelling in COMSOL and ANSYS Fluent.</p>
-        <a href="biocorrosion.html">See: biocorrosion study →</a>
+        <p>Running detailed multiphysics models in COMSOL and ANSYS to validate designs.</p>
+        <a href="#work">View simulation projects &rarr;</a>
       </div>
       <div class="cap">
-        <span class="cap__code">DEV</span>
-        <h3>Software development</h3>
-        <p>Full-stack builds — React front ends, Express backends, generated reports.</p>
-        <a href="fluid-mechanics-lab.html">See: virtual fluid lab →</a>
+        <span class="cap__code">MFG</span>
+        <h3>Prototyping &amp; Machining</h3>
+        <p>Bringing concepts to life using CAD, 3D printing, conventional machining, and CNC.</p>
+        <a href="#work">View hardware projects &rarr;</a>
       </div>
       <div class="cap">
-        <span class="cap__code">HW</span>
-        <h3>Embedded &amp; hardware</h3>
-        <p>Raspberry Pi-based prototypes, from concept through working build.</p>
-        <a href="ezprint-kiosk.html">See: EZPrint kiosk →</a>
+        <span class="cap__code">FLD</span>
+        <h3>Field Troubleshooting</h3>
+        <p>Diagnosing and resolving complex issues during marine bot field tests at SCRUB Robotics.</p>
+        <a href="#work">Read more &rarr;</a>
       </div>
       <div class="cap">
-        <span class="cap__code">DOC</span>
-        <h3>Technical documentation</h3>
-        <p>Formal reports formatted to institutional templates, LaTeX and DOCX.</p>
-        <a href="casting-solidification.html">See: casting synopsis →</a>
+        <span class="cap__code">EMB</span>
+        <h3>Embedded Programming</h3>
+        <p>Writing C/Python logic and programming microcontrollers (Arduino UNO/MEGA) for hardware control.</p>
+        <a href="#work">View electronics projects &rarr;</a>
       </div>
     </div>
   </section>
@@ -262,9 +308,9 @@
     <h2>Let's talk mechanical engineering.</h2>
     <p>Open to discussing projects, internships, or just comparing notes on simulation work. I usually reply within a day.</p>
     <div class="contact__links">
-      <a href="mailto:you@example.com" class="btn btn--solid">you@example.com</a>
-      <a href="https://linkedin.com/in/your-handle" class="btn btn--outline" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/your-handle" class="btn btn--outline" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:aadityasedamkar3@gmail.com" class="btn btn--solid">aadityasedamkar3@gmail.com</a>
+      <a href="https://www.linkedin.com/in/aaditya-sedamkar-655333346" class="btn btn--outline" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Aaditya-Sedamkar" class="btn btn--outline" target="_blank" rel="noopener">GitHub</a>
     </div>
   </section>
 
@@ -273,7 +319,7 @@
 <footer class="site-footer">
   <div class="wrap" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:8px;">
     <span>© 2026 Aaditya P Sedamkar</span>
-    <span>RV College of Engineering, Bengaluru</span>
+    <span>RVCE | SCRUB Robotics</span>
   </div>
 </footer>
 
