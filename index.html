@@ -15,6 +15,7 @@
     <a href="#top" class="site-nav__mark">AADITYA P SEDAMKAR</a>
     <div class="site-nav__links">
       <a href="#work">Projects</a>
+      <a href="#cad-gallery">Gallery</a>
       <a href="#skills">Skills</a>
       <a href="#motorsport">Featured</a>
       <a href="#capabilities">Capabilities</a>
@@ -28,10 +29,10 @@
   <header class="hero">
     <div class="wrap hero-split">
       <div class="hero-split__content">
-        <h1>Aaditya Sedamkar</h1>
-        <p class="hero__punchline">Mechanical design, simulation, and prototyping.</p>
+        <h1>Aaditya P Sedamkar</h1>
+        <p class="hero__punchline">Mechanical design, simulation, and robotics prototyping.</p>
         <p class="hero__eyebrow">Mechanical Engineering Student at R V College of Engineering, Bangalore<br>Mechanical Engineer at SCRUB Robotics, Atomic Dynamics Pvt Ltd, Bangalore</p>
-        <p class="hero__lede">From detailed multiphysics models to hands-on machining and field-tested marine bots, I build mechanical systems that solve real-world engineering problems.</p>
+        <p class="hero__lede">From detailed multiphysics models to hands-on CNC machining and field-tested marine bots, I build mechanical systems that solve real-world engineering problems.</p>
         <div class="hero__cta">
           <a href="#work" class="btn btn--solid">View projects</a>
           <a href="#contact" class="btn btn--outline">Get in touch</a>
@@ -127,7 +128,7 @@
         </div>
       </a>
 
-      <a class="card" href="#" data-category="hardware">
+      <a class="card" href="pet-recycling.html" data-category="hardware">
         <div class="card__thumb" style="display: flex; align-items: center; justify-content: center; background: rgba(36, 84, 176, 0.05);">
           <span style="color: var(--accent); font-weight: 500;">Placeholder Image</span>
         </div>
@@ -138,7 +139,7 @@
         </div>
       </a>
 
-      <a class="card" href="#" data-category="simulation">
+      <a class="card" href="cu-ni-si-alloys.html" data-category="simulation">
         <div class="card__thumb" style="display: flex; align-items: center; justify-content: center; background: rgba(36, 84, 176, 0.05);">
           <span style="color: var(--accent); font-weight: 500;">Placeholder Image</span>
         </div>
@@ -149,7 +150,7 @@
         </div>
       </a>
 
-      <a class="card" href="#" data-category="hardware">
+      <a class="card" href="labfab.html" data-category="hardware">
         <div class="card__thumb" style="display: flex; align-items: center; justify-content: center; background: rgba(36, 84, 176, 0.05);">
           <span style="color: var(--accent); font-weight: 500;">Placeholder Image</span>
         </div>
@@ -160,7 +161,7 @@
         </div>
       </a>
 
-      <a class="card" href="#" data-category="case-study">
+      <a class="card" href="fdm-polymers.html" data-category="case-study">
         <div class="card__thumb" style="display: flex; align-items: center; justify-content: center; background: rgba(36, 84, 176, 0.05);">
           <span style="color: var(--accent); font-weight: 500;">Placeholder Image</span>
         </div>
@@ -216,6 +217,36 @@
           <p class="card__desc">ANSYS Fluent thermal model tracking the solidification front through an aluminium sand casting.</p>
         </div>
       </a>
+
+    </div>
+  </section>
+
+  <section class="wrap" id="cad-gallery">
+    <div class="section-head">
+      <h2>CAD Gallery</h2>
+      <p>Interactive 3D models of my designs. Drag to rotate and scroll to zoom.</p>
+    </div>
+    <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin-bottom: 60px;">
+      
+      <div class="gallery-item" style="background: var(--bg-alt); border-radius: 4px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <div style="aspect-ratio: 4/3; background: #0A0A0A; position: relative;">
+          <model-viewer 
+            src="crane_hook.glb" 
+            alt="3D CAD model of a crane hook" 
+            auto-rotate 
+            camera-controls 
+            shadow-intensity="1" 
+            exposure="1.2"
+            style="width: 100%; height: 100%; background-color: transparent;">
+          </model-viewer>
+        </div>
+        <div style="padding: 20px;">
+          <h3 style="margin: 0 0 8px; font-size: 1.1rem; color: var(--white);">Crane Hook</h3>
+          <p style="margin: 0; font-size: 0.9rem; color: var(--ink-soft);">Structural design optimized for heavy lifting.</p>
+        </div>
+      </div>
+
+      <!-- You can add more .glb files here by copying the block above -->
 
     </div>
   </section>

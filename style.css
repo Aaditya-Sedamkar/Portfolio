@@ -1,5 +1,5 @@
 /* =========================================================
-   Aaditya Sedamkar — Mechanical Engineering Portfolio
+   Aaditya P Sedamkar — Mechanical Engineering Portfolio
    Theme: Dark Mode Industrial (Ultra-Premium Refined)
    ========================================================= */
 
@@ -39,9 +39,14 @@ body {
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  zoom: 0.8; /* Scales everything down by 20% */
   position: relative;
   overflow-x: hidden; /* Prevent horizontal scroll from absolute glows */
+}
+
+@media (min-width: 901px) {
+  body {
+    zoom: 0.8; /* Scales everything down by 20% */
+  }
 }
 
 /* 3. The Radial Glow (Environmental Depth) */
