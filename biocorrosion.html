@@ -22,41 +22,115 @@
 
 <main>
   <header class="wrap detail-hero">
-    <p class="detail-hero__cat">Simulation — COMSOL Multiphysics</p>
-    <h1>Biocorrosion of Titanium Alloys</h1>
-    <p class="detail-hero__lede">A comparative biocorrosion simulation of three titanium alloys, built to weigh their suitability for long-term implant service — where corrosion resistance matters as much as mechanical strength.</p>
+    <p class="detail-hero__cat">Simulation &amp; Material Analysis</p>
+    <h1>Biocorrosion of Titanium Alloys Under Disrupted Oxide Conditions</h1>
+    <p class="detail-hero__lede">A comparative electrochemical assessment of Ti-6Zr and Ti-8V in simulated body fluid, referenced against the widely used Ti-6Al-4V baseline under mechanically disrupted (wear-corrosion) scenarios.</p>
   </header>
 
   <div class="wrap">
-    <div class="detail-facts">
-      <div class="detail-facts__cell">
-        <b>Alloys compared</b>Ti-6Al-4V, Ti-6Zr, Ti-8V
-      </div>
-      <div class="detail-facts__cell">
-        <b>Core physics</b>Tertiary Current Distribution
-      </div>
-      <div class="detail-facts__cell">
-        <b>Kinetics</b>Butler–Volmer electrode model
-      </div>
-      <div class="detail-facts__cell">
-        <b>Deliverable</b>Cited academic report
-      </div>
-    </div>
+    <div class="featured-grid" style="align-items: start; margin-top: 20px;">
+      <div class="detail-body">
+        <div class="detail-facts" style="margin-bottom: 60px;">
+          <div class="detail-facts__cell" style="margin-bottom: 8px;">
+            <b style="display: inline-block; width: 140px; color: var(--accent);">Alloys compared</b>Ti-6Al-4V, Ti-6Zr, Ti-8V/Ti185
+          </div>
+          <div class="detail-facts__cell" style="margin-bottom: 8px;">
+            <b style="display: inline-block; width: 140px; color: var(--accent);">Test Scenario</b>Tribocorrosion in SBF
+          </div>
+          <div class="detail-facts__cell" style="margin-bottom: 8px;">
+            <b style="display: inline-block; width: 140px; color: var(--accent);">Core Mechanism</b>Depassivation–Repassivation
+          </div>
+          <div class="detail-facts__cell" style="margin-bottom: 8px;">
+            <b style="display: inline-block; width: 140px; color: var(--accent);">Deliverable</b>Technical Supplement Report
+          </div>
+        </div>
 
-    <div class="detail-thumb">
-    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <circle cx="50" cy="28" r="8" fill="none" stroke="#2454B0" stroke-width="2"/><circle cx="26" cy="64" r="8" fill="none" stroke="#2454B0" stroke-width="2"/><circle cx="74" cy="64" r="8" fill="none" stroke="#2454B0" stroke-width="2"/><line x1="50" y1="36" x2="29" y2="58" stroke="#2454B0" stroke-width="2"/><line x1="50" y1="36" x2="71" y2="58" stroke="#2454B0" stroke-width="2"/><line x1="34" y1="64" x2="66" y2="64" stroke="#2454B0" stroke-width="2"/>
-    </svg>
-  </div>
+        <h2>The Tribocorrosion Paradigm</h2>
+        <p>While all commercial titanium alloys form a self-healing TiO₂ passive film, in-service implants are subjected to micromotion and sliding contact (e.g., fretting at modular junctions). This mechanical action transiently fractures the oxide, exposing the bare metal to the biological fluid. This <strong>depassivation-repassivation</strong> cycle drives real-world implant degradation, causing sharp drops in open-circuit potential (OCP) and cumulative ion release.</p>
 
-    <div class="detail-body">
-      <h2>Method</h2>
-      <p>Each alloy was modelled using a Tertiary Current Distribution interface (Nernst–Planck transport), coupled with Butler–Volmer kinetics at the electrode surface and a boundary ODE submodel governing repassivation. The differentiating parameters for each alloy — bare exchange current density (i₀,bare), bare equilibrium potential (E_eq,bare), and repassivation rate constant (k_repass) — were extracted directly from each alloy's own .mph archive, keeping the comparison grounded in alloy-specific data rather than generic literature values.</p>
+        <h2>Chemical &amp; Microstructural Vulnerabilities</h2>
+        <p>The baseline alloy, <strong>Ti-6Al-4V</strong>, forms an oxide containing Al₂O₃ and V₂O₅, both of which dissolve under physiological conditions. Once the oxide is breached, it releases toxic Al³⁺ and vanadate species. However, its α+β duplex structure provides some strain-hardening capacity to resist wear.</p>
+        
+        <p>By contrast, <strong>Ti-8V (Ti185)</strong>, a high-strength metastable β-titanium alloy, contains double the vanadium content. Its single-phase β microstructure lacks the strain-hardening capacity of Ti-6Al-4V. Analogue studies reveal that this causes significant wear-acceleration specifically in Simulated Body Fluid (SBF)—a wear-corrosion synergy not predicted by dry wear testing alone. This compounded with the larger reservoir of dissolvable V₂O₅ makes Ti-8V less favourable in disrupted-oxide scenarios.</p>
 
-      <h2>Why it matters</h2>
-      <p>An implant that corrodes releases metal ions into surrounding tissue and loses mechanical integrity over years of service. Titanium alloys are the default choice for their passive oxide layer, but that layer behaves differently depending on the alloying elements — which is what this study set out to quantify.</p>
+        <h2>The Superior Alternative: Ti-6Zr</h2>
+        <p>Comparative analysis identifies <strong>Ti-6Zr</strong> as the strongest performer. Because Zirconium forms a chemically stable ZrO₂ oxide, the residual and reforming film is robust at every stage of the tribocorrosion cycle. Ti-6Zr exhibits a substantially smaller OCP collapse (~380 mV vs. 658 mV for the baseline), faster repassivation, and—critically—releases only biocompatible Ti⁴⁺ and Zr⁴⁺ ions.</p>
 
-      <div class="result-box">Ti-6Zr was identified as the superior alloy of the three candidates, on the basis of its comparative corrosion and repassivation behaviour. The full comparison was compiled into a detailed academic report with inline citation of supporting literature.</div>
+        <div class="result-box">Ti-6Zr decisively outperformed both the Ti-6Al-4V baseline and Ti-8V under disrupted-oxide conditions, demonstrating superior repassivation kinetics and a safe, non-toxic ion release profile.</div>
+      </div>
+
+      <div class="detail-thumb" style="position: sticky; top: 60px; margin-top: 40px;">
+        <div class="carousel-container" style="position: relative; overflow: hidden; border-radius: 4px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); aspect-ratio: 16/9; background: #0A0A0A;">
+          <div class="carousel-track" style="display: flex; height: 100%; transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);">
+            <img src="biocorrosion (1).png" alt="Biocorrosion Analysis Data" style="min-width: 100%; height: 100%; object-fit: contain;">
+            <img src="biocorrosion (2).png" alt="Comparative OCP Collapse Data" style="min-width: 100%; height: 100%; object-fit: contain;">
+          </div>
+          
+          <div class="carousel-dots" style="position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; z-index: 10;">
+            <button class="dot" style="width: 8px; height: 8px; border-radius: 50%; border: none; background: rgba(255,255,255,0.9); cursor: pointer; padding: 0; transition: background 0.3s;"></button>
+            <button class="dot" style="width: 8px; height: 8px; border-radius: 50%; border: none; background: rgba(255,255,255,0.3); cursor: pointer; padding: 0; transition: background 0.3s;"></button>
+          </div>
+        </div>
+        
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            const track = document.querySelector('.carousel-track');
+            const images = track.querySelectorAll('img');
+            const dots = document.querySelectorAll('.carousel-dots .dot');
+            let currentIndex = 0;
+            let autoPlayInterval;
+
+            function goToSlide(index) {
+              currentIndex = index;
+              track.style.transform = `translateX(-${currentIndex * 100}%)`;
+              dots.forEach(d => d.style.background = 'rgba(255,255,255,0.3)');
+              dots[currentIndex].style.background = 'rgba(255,255,255,0.9)';
+            }
+
+            function moveToNextSlide() {
+              goToSlide((currentIndex + 1) % images.length);
+            }
+
+            function startAutoPlay() {
+              stopAutoPlay();
+              autoPlayInterval = setInterval(moveToNextSlide, 2000);
+            }
+
+            function stopAutoPlay() {
+              clearInterval(autoPlayInterval);
+            }
+
+            startAutoPlay();
+
+            const container = document.querySelector('.carousel-container');
+            container.addEventListener('mouseenter', stopAutoPlay);
+            container.addEventListener('mouseleave', startAutoPlay);
+            container.addEventListener('touchstart', stopAutoPlay, {passive: true});
+            container.addEventListener('touchend', startAutoPlay);
+            
+            dots.forEach((dot, index) => {
+              dot.addEventListener('click', () => {
+                goToSlide(index);
+              });
+            });
+
+            let startX = 0;
+            container.addEventListener('touchstart', (e) => {
+              startX = e.touches[0].clientX;
+            }, {passive: true});
+
+            container.addEventListener('touchend', (e) => {
+              const endX = e.changedTouches[0].clientX;
+              const diff = startX - endX;
+              if (Math.abs(diff) > 40) {
+                if (diff > 0) goToSlide((currentIndex + 1) % images.length); // swipe left
+                else goToSlide((currentIndex - 1 + images.length) % images.length); // swipe right
+              }
+            });
+          });
+        </script>
+      </div>
+
     </div>
   </div>
 

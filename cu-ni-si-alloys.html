@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -28,9 +28,84 @@
   </header>
 
   <div class="wrap">
-    <div class="detail-body">
-      <h2>Overview</h2>
-      <p>This project is currently being documented. Detailed methodologies, CAD models, and test results will be added here soon.</p>
+    <div class="featured-grid" style="align-items: start; margin-top: 20px;">
+      <div class="detail-body">
+        <h2>Overview</h2>
+        <p>This project is currently being documented. Detailed methodologies, analytical models, and simulation results will be added here soon.</p>
+      </div>
+
+      <div class="detail-thumb" style="position: sticky; top: 60px; margin-top: 40px;">
+        <div class="carousel-container" style="position: relative; overflow: hidden; border-radius: 4px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); aspect-ratio: 16/9; background: #0A0A0A;">
+          <div class="carousel-track" style="display: flex; height: 100%; transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);">
+            <img src="cu-ni-si-alloys (1).jpeg" alt="Cu-Ni-Si Alloys Precipitation" style="min-width: 100%; height: 100%; object-fit: contain;">
+            <img src="cu-ni-si-alloys (2).jpeg" alt="Cu-Ni-Si Alloys Data" style="min-width: 100%; height: 100%; object-fit: contain;">
+          </div>
+          
+          <div class="carousel-dots" style="position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; z-index: 10;">
+            <button class="dot active" style="width: 8px; height: 8px; border-radius: 50%; border: none; background: rgba(255,255,255,0.9); cursor: pointer; padding: 0; transition: background 0.3s;"></button>
+            <button class="dot" style="width: 8px; height: 8px; border-radius: 50%; border: none; background: rgba(255,255,255,0.3); cursor: pointer; padding: 0; transition: background 0.3s;"></button>
+          </div>
+        </div>
+        
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            const track = document.querySelector('.carousel-track');
+            if(!track) return;
+            const images = track.querySelectorAll('img');
+            const dots = document.querySelectorAll('.carousel-dots .dot');
+            let currentIndex = 0;
+            let autoPlayInterval;
+
+            function goToSlide(index) {
+              currentIndex = index;
+              track.style.transform = `translateX(-${currentIndex * 100}%)`;
+              dots.forEach(d => d.style.background = 'rgba(255,255,255,0.3)');
+              dots[currentIndex].style.background = 'rgba(255,255,255,0.9)';
+            }
+
+            function moveToNextSlide() {
+              goToSlide((currentIndex + 1) % images.length);
+            }
+
+            function startAutoPlay() {
+              stopAutoPlay();
+              autoPlayInterval = setInterval(moveToNextSlide, 2000);
+            }
+
+            function stopAutoPlay() {
+              clearInterval(autoPlayInterval);
+            }
+
+            startAutoPlay();
+
+            const container = document.querySelector('.carousel-container');
+            container.addEventListener('mouseenter', stopAutoPlay);
+            container.addEventListener('mouseleave', startAutoPlay);
+            container.addEventListener('touchstart', stopAutoPlay, {passive: true});
+            container.addEventListener('touchend', startAutoPlay);
+            
+            dots.forEach((dot, index) => {
+              dot.addEventListener('click', () => {
+                goToSlide(index);
+              });
+            });
+
+            let startX = 0;
+            container.addEventListener('touchstart', (e) => {
+              startX = e.touches[0].clientX;
+            }, {passive: true});
+
+            container.addEventListener('touchend', (e) => {
+              const endX = e.changedTouches[0].clientX;
+              const diff = startX - endX;
+              if (Math.abs(diff) > 40) {
+                if (diff > 0) goToSlide((currentIndex + 1) % images.length);
+                else goToSlide((currentIndex - 1 + images.length) % images.length);
+              }
+            });
+          });
+        </script>
+      </div>
     </div>
   </div>
 

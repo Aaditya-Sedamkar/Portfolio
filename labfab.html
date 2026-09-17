@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -24,13 +24,122 @@
   <header class="wrap detail-hero">
     <p class="detail-hero__cat">Hardware / Prototyping</p>
     <h1>LabFab: A Custom Lab Electrode Fabricator</h1>
-    <p class="detail-hero__lede">Details and full project report will be added soon.</p>
+    <p class="detail-hero__lede">A prototype platform for automated electrode fabrication, consolidating surface roughening, slurry coating, drying, and calendaring into a continuous, modular workflow.</p>
   </header>
 
   <div class="wrap">
-    <div class="detail-body">
-      <h2>Overview</h2>
-      <p>This project is currently being documented. Detailed methodologies, CAD models, and test results will be added here soon.</p>
+    <div class="featured-grid" style="align-items: start; margin-top: 20px;">
+      <div class="detail-body">
+        <div class="detail-facts" style="margin-bottom: 60px;">
+          <div class="detail-facts__cell" style="margin-bottom: 8px;">
+            <b style="display: inline-block; width: 140px; color: var(--accent);">Control Systems</b>Arduino UNO R3, L298N
+          </div>
+          <div class="detail-facts__cell" style="margin-bottom: 8px;">
+            <b style="display: inline-block; width: 140px; color: var(--accent);">Actuation</b>NEMA-17 Steppers &amp; DC Motors
+          </div>
+          <div class="detail-facts__cell" style="margin-bottom: 8px;">
+            <b style="display: inline-block; width: 140px; color: var(--accent);">Coating Specs</b>50–500 µm Gap, 15 mm/min Speed
+          </div>
+          <div class="detail-facts__cell" style="margin-bottom: 8px;">
+            <b style="display: inline-block; width: 140px; color: var(--accent);">Reproducibility</b>Significantly higher than manual
+          </div>
+        </div>
+
+        <h2>System Architecture &amp; Workflow</h2>
+        <p>LabFab is designed to eliminate the inconsistencies of manual electrode preparation by integrating essential processing modules into a single automated pipeline:</p>
+        <ul>
+          <li style="margin-bottom: 10px;"><strong>Substrate Sanding and Cleaning:</strong> Dual-stage mechanical roughening of the copper foil using a 120-grit dry sander and a 240-grit wet sander under water rinse, followed by an acetone wash to remove organic contaminants.</li>
+          <li style="margin-bottom: 10px;"><strong>Doctor Blade Coating:</strong> A precision-adjustable (50–500 µm) doctor blade coats the substrate with a carbon-based slurry. NEMA 17 stepper motor-driven feed rollers maintain a constant linear velocity of 15 mm/min.</li>
+          <li style="margin-bottom: 10px;"><strong>Fan-Assisted Drying:</strong> Axial DC fans provide ambient airflow across the coated surface (4.5 m/s) to enable partial solvent evaporation and stabilize the wet film prior to calendaring.</li>
+          <li style="margin-bottom: 10px;"><strong>Calendaring:</strong> Spring-loaded 304 stainless steel rollers compress the electrode under a controlled pressure of 0.9 kN/m, densifying the coating, smoothing the surface, and reducing porosity.</li>
+        </ul>
+
+        <h2>Metrology &amp; Characterization</h2>
+        <p>The system's efficacy was validated through comprehensive metrology of the fabricated supercapacitor electrodes. <strong>Stylus profilometry</strong> confirmed that optimized multi-step sanding reduced surface roughness (Ra) down to 1.02 µm (400/800 grit), enhancing active material anchoring sites. <strong>Brookfield viscometry</strong> ensured the PVA-based slurry was maintained within the optimal processing range of 7.6–10.4 mPa·s.</p>
+        
+        <p>Subsequent 12-hour soak tests in 3M Na₂SO₄ electrolyte proved that coatings produced with tighter blade tolerances and standardized substrate roughness achieved superior mechanical stability—demonstrating >90% adhesion retention without visible delamination or swelling.</p>
+
+        <h2>Performance vs. Manual Coating</h2>
+        <p>While commercial lab coaters can incur capital costs of up to ₹10 lakh, the custom LabFab system provides an open-source, modular alternative for under ₹2 lakh. More critically, it drastically reduces operator dependency. Unlike manual preparation—which often yields non-uniform thickness, streaks, and uneven edge coverage—LabFab guarantees nearly identical coatings across batches. This highly reproducible approach accelerates electrode prototyping, allowing for more reliable chronological evaluations via Cyclic Voltammetry and Chronopotentiometry.</p>
+
+        <div class="result-box">LabFab successfully transforms the traditionally variable, multi-step manual electrode coating process into a standardized, high-throughput automated workflow perfectly suited for R&amp;D scaling.</div>
+      </div>
+
+      <div class="detail-thumb" style="position: sticky; top: 60px; margin-top: 40px;">
+        <div class="carousel-container" style="position: relative; overflow: hidden; border-radius: 4px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); aspect-ratio: 16/9; background: #050505;">
+          <div class="carousel-track" style="display: flex; height: 100%; transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);">
+            <img src="labfab (1).jpeg" alt="LabFab Hardware Build" style="min-width: 100%; height: 100%; object-fit: cover;">
+            <img src="labfab.png" alt="LabFab Diagram" style="min-width: 100%; height: 100%; object-fit: contain;">
+            <img src="labfab (2).jpeg" alt="LabFab Hardware Detail" style="min-width: 100%; height: 100%; object-fit: cover;">
+            <img src="labfab (3).jpeg" alt="LabFab Hardware Testing" style="min-width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          
+          <div class="carousel-dots" style="position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; z-index: 10;">
+            <button class="dot" style="width: 8px; height: 8px; border-radius: 50%; border: none; background: rgba(255,255,255,0.9); cursor: pointer; padding: 0; transition: background 0.3s;"></button>
+            <button class="dot" style="width: 8px; height: 8px; border-radius: 50%; border: none; background: rgba(255,255,255,0.3); cursor: pointer; padding: 0; transition: background 0.3s;"></button>
+            <button class="dot" style="width: 8px; height: 8px; border-radius: 50%; border: none; background: rgba(255,255,255,0.3); cursor: pointer; padding: 0; transition: background 0.3s;"></button>
+            <button class="dot" style="width: 8px; height: 8px; border-radius: 50%; border: none; background: rgba(255,255,255,0.3); cursor: pointer; padding: 0; transition: background 0.3s;"></button>
+          </div>
+        </div>
+        
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            const track = document.querySelector('.carousel-track');
+            const images = track.querySelectorAll('img');
+            const dots = document.querySelectorAll('.carousel-dots .dot');
+            let currentIndex = 0;
+            let autoPlayInterval;
+
+            function goToSlide(index) {
+              currentIndex = index;
+              track.style.transform = `translateX(-${currentIndex * 100}%)`;
+              dots.forEach(d => d.style.background = 'rgba(255,255,255,0.3)');
+              dots[currentIndex].style.background = 'rgba(255,255,255,0.9)';
+            }
+
+            function moveToNextSlide() {
+              goToSlide((currentIndex + 1) % images.length);
+            }
+
+            function startAutoPlay() {
+              stopAutoPlay();
+              autoPlayInterval = setInterval(moveToNextSlide, 2000);
+            }
+
+            function stopAutoPlay() {
+              clearInterval(autoPlayInterval);
+            }
+
+            startAutoPlay();
+
+            const container = document.querySelector('.carousel-container');
+            container.addEventListener('mouseenter', stopAutoPlay);
+            container.addEventListener('mouseleave', startAutoPlay);
+            container.addEventListener('touchstart', stopAutoPlay, {passive: true});
+            container.addEventListener('touchend', startAutoPlay);
+            
+            dots.forEach((dot, index) => {
+              dot.addEventListener('click', () => {
+                goToSlide(index);
+              });
+            });
+
+            let startX = 0;
+            container.addEventListener('touchstart', (e) => {
+              startX = e.touches[0].clientX;
+            }, {passive: true});
+
+            container.addEventListener('touchend', (e) => {
+              const endX = e.changedTouches[0].clientX;
+              const diff = startX - endX;
+              if (Math.abs(diff) > 40) {
+                if (diff > 0) goToSlide((currentIndex + 1) % images.length); // swipe left
+                else goToSlide((currentIndex - 1 + images.length) % images.length); // swipe right
+              }
+            });
+          });
+        </script>
+      </div>
     </div>
   </div>
 
