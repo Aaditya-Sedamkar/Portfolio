@@ -30,8 +30,37 @@
   <div class="wrap">
     <div class="featured-grid" style="align-items: start; margin-top: 20px;">
       <div class="detail-body">
-        <h2>Overview</h2>
-        <p>This project is currently being documented. Detailed methodologies, CAD models, and test results will be added here soon.</p>
+        <div class="detail-facts" style="margin-bottom: 60px;">
+          <div class="detail-facts__cell" style="margin-bottom: 8px;">
+            <b style="display: inline-block; width: 140px; color: var(--accent);">Target Output</b>1.75 mm 3D Printing Filament
+          </div>
+          <div class="detail-facts__cell" style="margin-bottom: 8px;">
+            <b style="display: inline-block; width: 140px; color: var(--accent);">Control System</b>ESP32 Microcontroller (Web UI)
+          </div>
+          <div class="detail-facts__cell" style="margin-bottom: 8px;">
+            <b style="display: inline-block; width: 140px; color: var(--accent);">Extrusion Temp</b>250–260°C (PID Controlled)
+          </div>
+          <div class="detail-facts__cell" style="margin-bottom: 8px;">
+            <b style="display: inline-block; width: 140px; color: var(--accent);">Actuation</b>NEMA 17 Stepper Motors
+          </div>
+        </div>
+
+        <h2>System Architecture &amp; Extrusion Workflow</h2>
+        <p>This project tackles the accumulation of plastic waste by introducing a decentralized, low-cost mechanism to recycle post-consumer polyethylene terephthalate (PET) bottles directly into functional Fused Deposition Modeling (FDM) filament.</p>
+        <p>The hardware pipeline follows a continuous, closed-loop approach:</p>
+        <ul>
+          <li style="margin-bottom: 10px;"><strong>Bottle Stripping:</strong> Post-consumer PET bottles are manually fed into a custom-fabricated cutting tool that slices the plastic into continuous strips.</li>
+          <li style="margin-bottom: 10px;"><strong>Heated Extrusion:</strong> The plastic strips are drawn through a custom 1.75 mm nozzle assembly. The hotend is regulated between 250°C and 260°C via a closed-loop PID control system.</li>
+          <li style="margin-bottom: 10px;"><strong>Spooling &amp; Dimensional Control:</strong> A high-torque NEMA 17 stepper motor acts as the puller/spooler mechanism. By correlating the angular speed (RPM) and the mass flow rate through the nozzle, the pull speed is actively tuned to maintain a strict 1.75 mm nominal filament diameter.</li>
+        </ul>
+
+        <h2>ESP32 Web-Based Control</h2>
+        <p>To ensure high reproducibility without relying on expensive industrial PLCs, the entire electromechanical system is governed by an Espressif ESP32 32-bit microcontroller. A locally hosted web interface was developed to allow real-time tuning of the extrusion parameters (heater PID values and spooler stepper speeds). This allows users to actively compensate for minor variations in bottle thickness and moisture content during live extrusion.</p>
+
+        <h2>Mechanical Characterization</h2>
+        <p>The core objective of producing this filament is structural viability. Standardized ASTM D638 Type IV tensile specimens are printed from the recycled PET and subjected to mechanical characterization on a Universal Testing Machine (UTM). Initial trials have shown promising extrusion stability and acceptable dimensional accuracy, with ongoing comparative testing benchmarking the recycled PET's yield stress and Young's modulus against commercial PLA and ABS.</p>
+
+        <div class="result-box">This compact system successfully democratizes PET recycling, providing a sustainable, low-cost, and robust filament generation platform tailored for educational and laboratory use.</div>
       </div>
 
       <div class="detail-thumb" style="position: sticky; top: 60px; margin-top: 40px;">

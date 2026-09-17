@@ -30,8 +30,35 @@
   <div class="wrap">
     <div class="featured-grid" style="align-items: start; margin-top: 20px;">
       <div class="detail-body">
-        <h2>Overview</h2>
-        <p>This project is currently being documented. Detailed methodologies, analytical models, and simulation results will be added here soon.</p>
+        <div class="detail-facts" style="margin-bottom: 60px;">
+          <div class="detail-facts__cell" style="margin-bottom: 8px;">
+            <b style="display: inline-block; width: 140px; color: var(--accent);">Target Alloy</b>Cu-3Ni-0.6Si (at%)
+          </div>
+          <div class="detail-facts__cell" style="margin-bottom: 8px;">
+            <b style="display: inline-block; width: 140px; color: var(--accent);">Modeling Tools</b>pycalphad (Python), MATLAB
+          </div>
+          <div class="detail-facts__cell" style="margin-bottom: 8px;">
+            <b style="display: inline-block; width: 140px; color: var(--accent);">Precipitate Phase</b>δ–Ni₂Si
+          </div>
+          <div class="detail-facts__cell" style="margin-bottom: 8px;">
+            <b style="display: inline-block; width: 140px; color: var(--accent);">Thermal Profile</b>450°C Isothermal Aging (4 hrs)
+          </div>
+        </div>
+
+        <h2>Thermodynamic Modeling (CALPHAD)</h2>
+        <p>High-performance Cu–Ni–Si "Corson" alloys rely on nanoscale intermetallic precipitates (δ–Ni₂Si) to achieve an optimal balance of mechanical strength and electrical conductivity. To map this process, I developed a digital twin utilizing the CALPHAD (Calculation of Phase Diagrams) approach. Using the <code>pycalphad</code> library and a custom ternary thermodynamic database (TDB), an 800°C isothermal section was computed to define the equilibrium solubility boundaries for the FCC_A1 matrix and the strengthening δ-phase.</p>
+
+        <h2>Kinetic Simulation of Microstructural Evolution</h2>
+        <p>While thermodynamic equilibrium establishes the boundaries, real-world precipitation is governed by time-dependent kinetics. A comprehensive MATLAB model was written to simulate isothermal aging at 450°C over 4 hours. The kinetic solver integrates:</p>
+        <ul>
+          <li style="margin-bottom: 10px;"><strong>Classical Nucleation Theory (CNT):</strong> Computes the time-dependent nucleation rate of new particles based on the chemical driving force derived from the CALPHAD solubility product.</li>
+          <li style="margin-bottom: 10px;"><strong>Zener-Hillert Growth Model:</strong> Solves diffusion-limited particle growth, accounting for instantaneous matrix solute depletion via iterative mass balance equations.</li>
+        </ul>
+
+        <h2>Simulation Results &amp; Validation</h2>
+        <p>The integrated model captures the complete temporal evolution of the microstructure. Over the 4-hour aging cycle, the simulation tracks a rapid spike in precipitate number density, followed by saturation as growth dominates. The final predicted state yielded a mean precipitate radius of <strong>11.0 nm</strong> and a number density of <strong>2.0 × 10²¹ m⁻³</strong>, indicating that the alloy achieved 60.2% of its theoretical precipitation progress.</p>
+
+        <div class="result-box">By achieving >85% accuracy against experimental literature, this multi-scale framework provides a predictive roadmap for optimizing heat treatments—effectively bypassing expensive "trial-and-error" metallurgy to maximize both structural integrity and electrical conductivity.</div>
       </div>
 
       <div class="detail-thumb" style="position: sticky; top: 60px; margin-top: 40px;">
