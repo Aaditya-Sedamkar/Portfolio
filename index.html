@@ -226,10 +226,11 @@
       <h2>CAD Gallery</h2>
       <p>Interactive 3D models of my designs. Drag to rotate and scroll to zoom.</p>
     </div>
-    <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin-bottom: 60px;">
+    <div class="cad-gallery-list" style="display: flex; flex-direction: column; gap: 80px; margin-bottom: 60px;">
       
-      <div class="gallery-item" style="background: var(--bg-alt); border-radius: 4px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-        <div style="aspect-ratio: 4/3; background: #0A0A0A; position: relative;">
+      <!-- CAD Item -->
+      <div class="featured-grid">
+        <div class="featured__thumb" style="position: relative; overflow: hidden;">
           <model-viewer 
             src="crane_hook.glb" 
             alt="3D CAD model of a crane hook" 
@@ -240,13 +241,14 @@
             style="width: 100%; height: 100%; background-color: transparent;">
           </model-viewer>
         </div>
-        <div style="padding: 20px;">
-          <h3 style="margin: 0 0 8px; font-size: 1.1rem; color: var(--white);">Crane Hook</h3>
-          <p style="margin: 0; font-size: 0.9rem; color: var(--ink-soft);">Structural design optimized for heavy lifting.</p>
+        <div>
+          <p class="featured__eyebrow">Interactive CAD Model</p>
+          <h3 style="font-size: 2.2rem; font-weight: 800; margin: 0 0 20px; color: var(--pure-white);">Crane Hook</h3>
+          <p style="color: var(--ink-soft); margin: 0 0 32px; font-size: 1.1rem; line-height: 1.7;">A structural design optimized for heavy lifting and endurance. Evaluated for maximum load capacity with minimized stress concentration near the inner radius.</p>
         </div>
       </div>
 
-      <!-- You can add more .glb files here by copying the block above -->
+      <!-- You can add more .glb files here by copying the CAD Item block above -->
 
     </div>
   </section>
